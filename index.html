@@ -215,7 +215,7 @@ h1,h2,h3{ margin:0; font-weight:500; }
 .intro-logo img{ width:100%; height:auto; --p:-8%;
   -webkit-mask-image:linear-gradient(100deg, #000 0%, #000 calc(var(--p) - 5%), transparent var(--p));
           mask-image:linear-gradient(100deg, #000 0%, #000 calc(var(--p) - 5%), transparent var(--p)); }
-.why blockquote{ margin:0 0 28px; font-family:var(--serif); font-style:italic; font-size:clamp(1.7rem,4.4vw,2.6rem); line-height:1.15; letter-spacing:-.015em; }
+.why blockquote{ margin:0 0 28px; font-family:var(--serif); font-style:normal; /* v0.5 한글 인용문이라 이탤릭 제거(가짜 기울임 방지) */ font-size:clamp(1.7rem,4.4vw,2.6rem); line-height:1.15; letter-spacing:-.015em; }
 .why .body p{ margin:0 0 14px; color:var(--ink-soft); }
 .points{ list-style:none; margin:26px 0 0; padding:0; display:grid; gap:0; border-top:1px solid var(--ink); }
 .points li{ display:grid; grid-template-columns:44px 1fr; padding:14px 0; border-bottom:1px solid var(--line); }
