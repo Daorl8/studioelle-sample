@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>스튜디오엘르 studio elle. | 수원역 증명사진 · 프로필 사진관</title>
+<meta name="description" content="수원역 13번 출구 도보 3분, 증명사진·여권사진·세미프로필·화보 프로필 사진관 스튜디오엘르. 1인 여성 작가, 1:1 맞춤 보정, 인화본 바로 수령, 100% 예약제." />
+<meta name="theme-color" content="#FFFFFF" />
+
+<link rel="canonical" href="https://studioelle-sample.lgt3232.workers.dev/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="스튜디오엘르" />
+<meta property="og:title" content="스튜디오엘르 studio elle. · 수원역 증명·프로필 사진관" />
+<meta property="og:description" content="1인 여성 작가 · 1:1 맞춤 보정 · 인화본 바로 수령. 증명사진, 세미프로필, 화보 프로필." />
+<meta property="og:url" content="https://studioelle-sample.lgt3232.workers.dev/" />
+<meta property="og:image" content="https://studioelle-sample.lgt3232.workers.dev/og-elle.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="ko_KR" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23FFFFFF'/%3E%3Ctext x='32' y='45' font-size='40' text-anchor='middle' fill='%23111111' font-family='Georgia,serif' font-style='italic'%3Ee.%3C/text%3E%3Crect x='14' y='52' width='36' height='3' fill='%239ECFEC'/%3E%3C/svg%3E" />
+
+<!-- 시안 도메인 = studioelle-sample.lgt3232.workers.dev. 고객 인계 시 grep lgt3232 → canonical·og:url·og:image·JSON-LD url/image 5곳 치환 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "스튜디오엘르",
+  "alternateName": "studio elle.",
+  "description": "수원역 증명사진·여권사진·세미프로필·화보 프로필 사진관. 1인 여성 작가, 1:1 맞춤 보정, 100% 예약제.",
+  "url": "https://studioelle-sample.lgt3232.workers.dev/",
+  "image": "https://studioelle-sample.lgt3232.workers.dev/og-elle.jpg",
+  "telephone": "+82-507-1470-6685",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "덕영대로895번길 7 2층 201호",
+    "addressLocality": "팔달구",
+    "addressRegion": "경기도 수원시",
+    "addressCountry": "KR"
+  },
+  "sameAs": ["https://www.instagram.com/studioelle_id/", "https://blog.naver.com/studio_elle", "https://pf.kakao.com/_vqMtxj"]
+}
+</script>
+
+<!-- Fonts (OFL · 로컬 서브셋 self-host)
+     영문 제목 = Cormorant Garamond 500 정·이탤릭 (로고 필기체·예약 공지의 이탤릭 세리프와 같은 결) / 한글·정보 = Pretendard (가변) -->
+<link rel="preload" as="font" type="font/woff2" href="se-cormorant.woff2" crossorigin />
+<style>
+@font-face{ font-family:"Cormorant Garamond"; font-style:normal; font-weight:500 600; font-display:swap; src:url("se-cormorant.woff2") format("woff2"); }
+@font-face{ font-family:"Cormorant Garamond"; font-style:italic; font-weight:500 600; font-display:swap; src:url("se-cormorant-italic.woff2") format("woff2"); }
+@font-face{ font-family:"Pretendard"; font-style:normal; font-weight:300 700; font-display:swap; src:url("se-pretendard.woff2") format("woff2"); }
+
+/* ============================================================
+   스튜디오엘르 · "White Editorial"
+   새하얀 지면 + 먹색 글자 + 밝은 하늘색 포인트(면·밑줄·선택 상태에만, 글자색으로는 안 씀)
+   규칙 ① 그림자·둥근 카드 없음 — 선과 여백 ② 사진이 주인공: 4:5 프레임 통일
+        ③ 영문은 Cormorant 이탤릭으로 잡지 표제처럼, 한글은 Pretendard로 정보 전달
+   ============================================================ */
+:root{
+  --white:#FFFFFF;
+  --ink:#111111;          /* 흰 바탕 18.9:1 */
+  --ink-soft:#555555;     /* 7.5:1 */
+  --line:#E5E5E5;
+  --sky:#9ECFEC;          /* 포인트 하늘색 · 면/밑줄 (위에 먹색 글자 12.6:1) */
+  --sky-2:#E3F2FB;        /* 연한 하늘 면 */
+  --serif:"Cormorant Garamond", "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  --sans:"Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  --maxw:1240px;
+  --gut:clamp(20px,5vw,52px);
+}
+*,*::before,*::after{ box-sizing:border-box; }
+html{ -webkit-text-size-adjust:100%; }
+body{ margin:0; font-family:var(--sans); color:var(--ink); background:var(--white); line-height:1.7; letter-spacing:-.01em; -webkit-font-smoothing:antialiased; word-break:keep-all; }
+body.lock{ overflow:hidden; }
+img{ max-width:100%; height:auto; display:block; }
+a{ color:inherit; text-decoration:none; }
+button{ font:inherit; color:inherit; }
+.wrap{ width:100%; max-width:var(--maxw); margin:0 auto; padding:0 var(--gut); }
+section[id]{ scroll-margin-top:68px; }
+h1,h2,h3{ margin:0; font-weight:500; }
+.serif{ font-family:var(--serif); }
+.it{ font-family:var(--serif); font-style:italic; }
+.mark{ background:linear-gradient(transparent 62%, var(--sky) 62%); padding:0 .08em; white-space:nowrap; }
+
+/* ---------- 버튼 ---------- */
+.btn{ display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:.95em 1.5em; font-size:.94rem; font-weight:600; border:1px solid var(--ink); background:transparent; cursor:pointer; transition:background .2s ease, color .2s ease, border-color .2s ease, transform .15s ease; }
+.btn.dark{ background:var(--ink); color:var(--white); }
+.btn.sky{ background:var(--sky); border-color:var(--sky); color:var(--ink); }
+.btn:active{ transform:scale(.98); }
+.btn svg{ width:16px; height:16px; flex:none; }
+:focus-visible{ outline:2px solid var(--ink); outline-offset:3px; }
+@media (hover:hover){
+  .btn.dark:hover{ background:#333; border-color:#333; }
+  .btn.line:hover{ background:var(--ink); color:var(--white); }
+  .btn.sky:hover{ background:var(--ink); border-color:var(--ink); color:var(--white); }
+}
+.btns{ display:flex; flex-wrap:wrap; gap:10px; }
+
+/* ---------- 헤더 ---------- */
+.site-head{ position:sticky; top:0; z-index:50; background:rgba(255,255,255,.95); border-bottom:1px solid var(--line); }
+.site-head .wrap{ display:flex; align-items:center; justify-content:space-between; gap:14px; height:64px; }
+.logo img{ width:128px; height:auto; }
+.nav{ display:flex; align-items:center; gap:clamp(16px,2.4vw,32px); font-size:.9rem; }
+.nav a:not(.btn){ color:var(--ink-soft); transition:color .2s ease; }
+.nav a:not(.btn) .it{ font-size:1.12rem; color:var(--ink); margin-right:4px; }
+.nav .btn{ padding:.6em 1.1em; font-size:.86rem; }
+@media (hover:hover){ .nav a:not(.btn):hover{ color:var(--ink); } }
+@media (max-width:900px){ .nav a:not(.btn){ display:none; } }
+
+/* ---------- 히어로 ---------- */
+.issue{ display:flex; justify-content:space-between; gap:12px; font-size:.72rem; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-soft); padding:12px 0; border-bottom:1px solid var(--line); }
+.issue span:last-child{ text-align:right; }
+.hero{ padding:0 0 clamp(56px,9vw,110px); }
+.hero-grid{ display:grid; gap:36px; margin-top:clamp(28px,5vw,60px); align-items:end; }
+.hero h1{ font-family:var(--serif); font-size:clamp(3.3rem,12.5vw,8.2rem); line-height:.92; letter-spacing:-.03em; }
+.hero h1 .it{ display:block; }
+.hero .lead{ margin:26px 0 0; font-size:clamp(1.02rem,2.4vw,1.14rem); max-width:27em; }
+.hero .btns{ margin-top:28px; }
+.facts{ display:grid; grid-template-columns:1fr 1fr; gap:0; margin:34px 0 0; padding:0; list-style:none; border-top:1px solid var(--ink); }
+.facts li{ padding:12px 0; border-bottom:1px solid var(--line); font-size:.9rem; display:flex; gap:10px; align-items:baseline; }
+.facts li:nth-child(odd){ padding-right:14px; }
+.facts .n{ font-family:var(--serif); font-style:italic; font-size:1.05rem; color:var(--ink-soft); }
+.hero-fig{ margin:0; position:relative; isolation:isolate; }
+.hero-fig::before{ content:""; position:absolute; inset:-16px 16px 16px -16px; background:var(--sky); z-index:-1; }
+.slides{ position:relative; aspect-ratio:4/5; overflow:hidden; background:var(--sky-2); }
+.slides img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0; transform:scale(1.06); transition:opacity 1.4s ease, transform 6s ease; }
+.slides img.on{ opacity:1; transform:scale(1); }
+.hero-fig figcaption{ display:flex; justify-content:space-between; margin-top:12px; font-size:.76rem; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-soft); }
+.dots{ display:flex; gap:6px; align-items:center; }
+.dots i{ width:18px; height:2px; background:var(--line); transition:background .4s ease; }
+.dots i.on{ background:var(--ink); }
+
+/* ---------- 섹션 머리 ---------- */
+.sec{ padding:clamp(80px,12vw,140px) 0 0; }
+.kick{ display:flex; align-items:baseline; justify-content:space-between; gap:14px; border-top:1px solid var(--ink); padding-top:12px; margin-bottom:clamp(28px,4.5vw,52px); font-size:.74rem; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-soft); }
+.sec-title{ display:grid; gap:14px; margin-bottom:clamp(30px,5vw,56px); }
+.sec-title h2{ font-family:var(--serif); font-size:clamp(2.6rem,8vw,5.2rem); line-height:.95; letter-spacing:-.025em; }
+.sec-title p{ margin:0; font-size:1.02rem; color:var(--ink-soft); max-width:34em; }
+.sec-title .ko{ font-family:var(--sans); font-size:1.05rem; font-weight:600; letter-spacing:-.01em; color:var(--ink); }
+
+/* ---------- 촬영 종류 ---------- */
+.kinds{ display:grid; gap:0; border-top:1px solid var(--line); }
+.kind{ padding:26px 0 30px; border-bottom:1px solid var(--line); display:grid; gap:12px; }
+.kind .top{ display:flex; justify-content:space-between; align-items:baseline; gap:12px; }
+.kind h3{ font-size:1.25rem; font-weight:700; }
+.kind h3 .it{ font-weight:500; font-size:1.3rem; margin-left:8px; color:var(--ink-soft); }
+.kind .time{ font-size:.82rem; color:var(--ink-soft); white-space:nowrap; }
+.kind ul{ margin:0; padding:0; list-style:none; display:grid; gap:6px; font-size:.95rem; }
+.kind li{ padding-left:16px; position:relative; }
+.kind li::before{ content:""; position:absolute; left:0; top:.72em; width:7px; height:7px; background:var(--sky); }
+.kind .note{ font-size:.84rem; color:var(--ink-soft); margin:0; }
+.kind .from{ font-family:var(--serif); font-size:1.5rem; }
+.kind .from small{ font-family:var(--sans); font-size:.8rem; color:var(--ink-soft); margin-left:4px; }
+
+/* ---------- 갤러리 ---------- */
+.chips{ display:flex; gap:8px; overflow-x:auto; padding-bottom:4px; margin-bottom:22px; scrollbar-width:none; }
+.chips::-webkit-scrollbar{ display:none; }
+.chip{ flex:none; padding:.55em 1.05em; border:1px solid var(--line); background:var(--white); font-size:.88rem; cursor:pointer; transition:background .2s ease, border-color .2s ease; }
+.chip[aria-pressed="true"]{ background:var(--sky); border-color:var(--sky); font-weight:600; }
+@media (hover:hover){ .chip:hover{ border-color:var(--ink); } }
+.grid{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:clamp(8px,1.2vw,16px); }
+.shot{ margin:0; position:relative; cursor:zoom-in; overflow:hidden; background:var(--sky-2); }
+.shot img{ width:100%; aspect-ratio:4/5; object-fit:cover; transition:transform .7s ease; }
+.shot figcaption{ position:absolute; left:0; bottom:0; padding:5px 9px; background:var(--white); font-size:.72rem; letter-spacing:.04em; opacity:0; transform:translateY(4px); transition:opacity .25s ease, transform .25s ease; }
+.shot.hide{ display:none; }
+@media (hover:hover){
+  .shot:hover img{ transform:scale(1.035); }
+  .shot:hover figcaption{ opacity:1; transform:none; }
+}
+.more{ display:flex; justify-content:center; gap:10px; flex-wrap:wrap; margin-top:30px; }
+
+/* 라이트박스 */
+.lb{ position:fixed; inset:0; z-index:100; background:rgba(255,255,255,.98); display:none; align-items:center; justify-content:center; padding:56px 14px 70px; }
+.lb.open{ display:flex; }
+.lb img{ max-height:100%; max-width:min(100%,760px); width:auto; object-fit:contain; }
+.lb .cap{ position:absolute; left:0; right:0; bottom:22px; text-align:center; font-size:.82rem; color:var(--ink-soft); }
+.lb button{ position:absolute; background:var(--white); border:1px solid var(--ink); width:46px; height:46px; display:flex; align-items:center; justify-content:center; cursor:pointer; }
+.lb .x{ top:12px; right:12px; }
+.lb .prev{ left:12px; top:50%; margin-top:-23px; }
+.lb .next{ right:12px; top:50%; margin-top:-23px; }
+.lb button svg{ width:18px; height:18px; }
+
+/* ---------- 왜 엘르 ---------- */
+.why{ display:grid; gap:34px; align-items:center; }
+.why figure{ margin:0; position:relative; isolation:isolate; }
+.why figure img{ width:100%; aspect-ratio:4/5; object-fit:cover; }
+.why figure::after{ content:""; position:absolute; right:-14px; bottom:-14px; width:42%; height:38%; background:var(--sky); z-index:-1; }
+.why blockquote{ margin:0 0 28px; font-family:var(--serif); font-style:italic; font-size:clamp(1.7rem,4.4vw,2.6rem); line-height:1.15; letter-spacing:-.015em; }
+.why .body p{ margin:0 0 14px; color:var(--ink-soft); }
+.points{ list-style:none; margin:26px 0 0; padding:0; display:grid; gap:0; border-top:1px solid var(--ink); }
+.points li{ display:grid; grid-template-columns:44px 1fr; padding:14px 0; border-bottom:1px solid var(--line); }
+.points .n{ font-family:var(--serif); font-style:italic; font-size:1.15rem; color:var(--ink-soft); }
+.points b{ display:block; font-weight:700; }
+.points span{ font-size:.92rem; color:var(--ink-soft); }
+
+/* ---------- 가격 ---------- */
+.price-wrap{ display:grid; gap:36px; }
+.ptable h3{ display:flex; justify-content:space-between; align-items:baseline; font-size:1rem; font-weight:700; padding-bottom:10px; border-bottom:1px solid var(--ink); }
+.ptable h3 .it{ font-weight:500; font-size:1.15rem; color:var(--ink-soft); }
+.ptable dl{ margin:0; }
+.ptable .row{ display:flex; align-items:baseline; gap:12px; padding:14px 0; border-bottom:1px solid var(--line); }
+.ptable dt{ flex:1; min-width:0; }
+.ptable dt small{ display:block; font-size:.8rem; color:var(--ink-soft); }
+.ptable dd{ margin:0; font-family:var(--serif); font-size:1.45rem; font-weight:600; font-variant-numeric:tabular-nums; white-space:nowrap; }
+.ptable dd small{ font-family:var(--sans); font-size:.78rem; font-weight:500; margin-left:2px; }
+.pnote{ margin:14px 0 0; font-size:.86rem; color:var(--ink-soft); }
+.pnote b{ color:var(--ink); }
+
+/* ---------- 촬영 안내 토글 ---------- */
+.guide{ border-top:1px solid var(--ink); }
+.guide details{ border-bottom:1px solid var(--line); }
+.guide summary{ list-style:none; display:grid; grid-template-columns:40px 1fr 28px; align-items:center; gap:6px; padding:20px 0; cursor:pointer; }
+.guide summary::-webkit-details-marker{ display:none; }
+.guide summary .n{ font-family:var(--serif); font-style:italic; font-size:1.15rem; color:var(--ink-soft); }
+.guide summary .t{ font-size:1.06rem; font-weight:700; }
+.guide summary .t small{ display:block; font-size:.82rem; font-weight:400; color:var(--ink-soft); margin-top:2px; }
+.guide summary .pm{ position:relative; width:22px; height:22px; justify-self:end; }
+.guide summary .pm::before, .guide summary .pm::after{ content:""; position:absolute; left:3px; right:3px; top:10px; height:1.5px; background:var(--ink); transition:transform .3s ease; }
+.guide summary .pm::after{ transform:rotate(90deg); }
+.guide details[open] summary .pm::after{ transform:rotate(0deg); }
+.guide details[open] summary{ padding-bottom:12px; }
+@media (hover:hover){ .guide summary:hover .t{ text-decoration:underline; text-decoration-color:var(--sky); text-decoration-thickness:3px; text-underline-offset:4px; } }
+.panel{ overflow:hidden; }
+.panel-in{ padding:0 0 26px 46px; font-size:.95rem; }
+.panel-in p{ margin:0 0 10px; }
+.panel-in ul, .panel-in ol{ margin:0 0 12px; padding-left:1.2em; }
+.panel-in li{ margin-bottom:4px; }
+.panel-in .muted{ color:var(--ink-soft); font-size:.88rem; }
+.panel-in .box{ background:var(--sky-2); padding:16px 18px; margin:6px 0 14px; }
+.panel-in .box ol{ margin:0; }
+a.u{ text-decoration:underline; text-decoration-color:var(--sky); text-decoration-thickness:2px; text-underline-offset:3px; }
+.partners{ display:grid; gap:12px; margin-top:4px; }
+.partner{ border:1px solid var(--line); padding:14px 16px; }
+.partner h4{ margin:0 0 6px; font-size:1rem; display:flex; justify-content:space-between; gap:8px; flex-wrap:wrap; align-items:baseline; }
+.partner h4 .it{ font-weight:500; font-size:1.1rem; color:var(--ink-soft); }
+.partner p{ margin:0 0 4px; font-size:.9rem; }
+.refund{ width:100%; border-collapse:collapse; margin:4px 0 12px; font-size:.92rem; }
+.refund td{ padding:9px 0; border-bottom:1px solid var(--line); }
+.refund td:last-child{ text-align:right; font-weight:700; font-variant-numeric:tabular-nums; }
+
+/* ---------- 오시는 길 ---------- */
+.visit{ display:grid; gap:34px; }
+.info{ margin:0; border-top:1px solid var(--ink); }
+.info .row{ display:grid; grid-template-columns:92px 1fr; gap:12px; padding:15px 0; border-bottom:1px solid var(--line); align-items:baseline; }
+.info dt{ font-family:var(--serif); font-style:italic; font-size:1.1rem; color:var(--ink-soft); }
+.info dd{ margin:0; }
+.info dd small{ display:block; font-size:.86rem; color:var(--ink-soft); margin-top:2px; }
+.visit .btns{ margin-top:24px; }
+.mapframe{ width:100%; aspect-ratio:4/3; border:0; display:block; filter:grayscale(1); background:var(--sky-2); }
+
+/* ---------- 푸터 ---------- */
+.foot{ margin-top:clamp(90px,13vw,150px); border-top:1px solid var(--ink); padding:40px 0 48px; font-size:.84rem; color:var(--ink-soft); }
+.foot .wrap{ display:grid; gap:20px; }
+.foot img{ width:150px; }
+.foot p{ margin:0 0 6px; }
+.foot a{ text-decoration:underline; text-decoration-color:var(--line); text-underline-offset:3px; }
+
+/* ---------- 리빌 ---------- */
+.reveal{ opacity:0; transform:translateY(22px); transition:opacity .9s ease, transform .9s ease; }
+.reveal.in{ opacity:1; transform:none; }
+
+/* ---------- 반응형 ---------- */
+@media (min-width:640px){
+  .grid{ grid-template-columns:repeat(3,minmax(0,1fr)); }
+  .partners{ grid-template-columns:1fr 1fr; }
+}
+@media (min-width:900px){
+  .hero-grid{ grid-template-columns:1.15fr .85fr; gap:clamp(40px,6vw,90px); }
+  .kinds{ grid-template-columns:repeat(3,1fr); border-top:0; }
+  .kind{ border-bottom:0; border-top:1px solid var(--ink); padding:22px clamp(18px,2.4vw,32px) 0 0; }
+  .kind + .kind{ border-left:1px solid var(--line); padding-left:clamp(18px,2.4vw,32px); }
+  .grid{ grid-template-columns:repeat(4,minmax(0,1fr)); }
+  .why{ grid-template-columns:.9fr 1.1fr; gap:clamp(48px,7vw,110px); }
+  .price-wrap{ grid-template-columns:1fr 1fr; gap:clamp(40px,6vw,90px); }
+  .guide-wrap{ display:grid; grid-template-columns:.8fr 1.2fr; gap:clamp(40px,6vw,90px); align-items:start; }
+  .guide-wrap .sec-title{ position:sticky; top:96px; }
+  .visit{ grid-template-columns:1fr 1.1fr; gap:clamp(40px,6vw,90px); align-items:center; }
+  .foot .wrap{ grid-template-columns:auto 1fr; gap:60px; align-items:start; }
+}
+@media (max-width:520px){
+  .hero .btns .btn{ flex:1 1 calc(50% - 5px); padding-left:.8em; padding-right:.8em; }
+  .hero .btns .btn:first-child{ flex-basis:100%; }
+  .visit .btns .btn{ flex:1 1 calc(50% - 5px); padding-left:.8em; padding-right:.8em; }
+  .visit .btns .btn:first-child{ flex-basis:100%; }
+  .panel-in{ padding-left:0; }
+  .info .row{ grid-template-columns:76px 1fr; }
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-naver" viewBox="0 0 24 24"><path fill="currentColor" d="M15.6 12.8 8.1 2H2v20h6.4V11.2L15.9 22H22V2h-6.4z"/></symbol>
+  <symbol id="i-kakao" viewBox="0 0 24 24"><path fill="currentColor" d="M12 3C6.5 3 2 6.5 2 10.8c0 2.8 1.9 5.2 4.7 6.6l-1 3.6c-.1.3.3.6.6.4l4.2-2.8c.5.1 1 .1 1.5.1 5.5 0 10-3.5 10-7.9S17.5 3 12 3z"/></symbol>
+  <symbol id="i-insta" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M7 2.8h10A4.2 4.2 0 0 1 21.2 7v10a4.2 4.2 0 0 1-4.2 4.2H7A4.2 4.2 0 0 1 2.8 17V7A4.2 4.2 0 0 1 7 2.8z"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.4" cy="6.6" r="1.3" fill="currentColor"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M4 12h15M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M5 5l14 14M19 5 5 19"/></symbol>
+</svg>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="스튜디오엘르 처음으로"><img src="se-logo.webp" alt="studio elle." width="669" height="205" /></a>
+    <nav class="nav" aria-label="주요 메뉴">
+      <a href="#kinds"><span class="it">Shoot</span>촬영 종류</a>
+      <a href="#gallery"><span class="it">Gallery</span>갤러리</a>
+      <a href="#price"><span class="it">Price</span>가격</a>
+      <a href="#guide"><span class="it">Guide</span>촬영 안내</a>
+      <a href="#visit"><span class="it">Visit</span>오시는 길</a>
+      <a class="btn dark" href="https://m.place.naver.com/place/1897165666/ticket" target="_blank" rel="noopener">예약하기</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" aria-labelledby="hero-h">
+    <div class="wrap">
+      <div class="issue"><span>Studio elle. · ID · Profile · Pictorial</span><span>Suwon Stn. Exit 13</span></div>
+      <div class="hero-grid">
+        <div class="reveal">
+          <h1 id="hero-h">Portraits,<span class="it">one by one.</span></h1>
+          <p class="lead">찍어내듯 똑같은 보정 대신, 한 사람에게 어울리는 분위기를 찾아 <span class="mark">1:1로 보정</span>합니다. 수원역 증명사진 · 프로필 사진관 스튜디오엘르.</p>
+          <div class="btns">
+            <a class="btn dark" href="https://m.place.naver.com/place/1897165666/ticket" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-naver"/></svg>네이버 예약</a>
+            <a class="btn sky" href="https://pf.kakao.com/_vqMtxj" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-kakao"/></svg>카카오톡 문의</a>
+            <a class="btn line" href="https://www.instagram.com/studioelle_id/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-insta"/></svg>인스타그램</a>
+          </div>
+          <ul class="facts">
+            <li><span class="n">i.</span>1인 여성 작가</li>
+            <li><span class="n">ii.</span>1:1 맞춤 보정</li>
+            <li><span class="n">iii.</span>인화본 바로 수령</li>
+            <li><span class="n">iv.</span>100% 예약제</li>
+          </ul>
+        </div>
+        <figure class="hero-fig reveal">
+          <div class="slides" id="slides">
+            <img class="on" src="se-hero.webp" alt="연한 하늘색 배경 앞, 검은 오프숄더 차림의 화보 프로필" width="1200" height="1600" fetchpriority="high" />
+            <img src="se-pic-05.webp" alt="흰 오프숄더 차림의 화보 프로필 클로즈업" width="800" height="1000" />
+            <img src="se-semi-01.webp" alt="흰 배경의 세미프로필 상반신" width="800" height="1000" />
+            <img src="se-feature.webp" alt="회색 배경과 그림자를 살린 단발 화보 프로필" width="1000" height="1262" />
+          </div>
+          <figcaption><span>Pictorial profile</span><span class="dots" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="kinds" aria-labelledby="kinds-h" style="padding-top:0">
+    <div class="wrap">
+      <div class="kick"><span>01 / Shoot</span><span>촬영 종류</span></div>
+      <div class="sec-title reveal">
+        <h2 id="kinds-h">Three ways<br /><span class="it">to be recorded.</span></h2>
+        <p><span class="ko">증명사진 · 세미프로필 · 화보 프로필</span><br />어디에 쓸 사진인지에 따라 구도와 배경이 달라져요.</p>
+      </div>
+      <div class="kinds">
+        <article class="kind reveal">
+          <div class="top"><h3>증명사진<span class="it">ID</span></h3><span class="time">약 40분</span></div>
+          <ul>
+            <li>머리부터 허리까지, 상반신 정면 촬영</li>
+            <li>정해진 배경지 중 1가지 선택</li>
+            <li>보정 후 제출용 사이즈 추가 제공</li>
+          </ul>
+          <p class="from">60,000<small>원 · 여권사진 동일</small></p>
+        </article>
+        <article class="kind reveal">
+          <div class="top"><h3>세미프로필<span class="it">Semi</span></h3><span class="time">약 40분</span></div>
+          <ul>
+            <li>증명사진과 같은 상반신 구도·배경</li>
+            <li>측면까지 촬영</li>
+          </ul>
+          <p class="note">※ 민증·운전면허 등 제출용으로는 사용이 어려워요.</p>
+          <p class="from">80,000<small>원부터</small></p>
+        </article>
+        <article class="kind reveal">
+          <div class="top"><h3>화보 프로필<span class="it">Pictorial</span></h3><span class="time">1컨셉 약 1시간</span></div>
+          <ul>
+            <li>자유로운 구도, 포즈 가능</li>
+            <li>원하는 컨셉·색감으로 촬영</li>
+            <li>맞춤 조명·그림자·색감 작업</li>
+            <li>스냅 · 자연광 · 호리존 공간</li>
+          </ul>
+          <p class="from">120,000<small>원부터</small></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="gallery" aria-labelledby="gallery-h">
+    <div class="wrap">
+      <div class="kick"><span>02 / Gallery</span><span>작업 사진</span></div>
+      <div class="sec-title reveal">
+        <h2 id="gallery-h">The <span class="it">archive.</span></h2>
+        <p>사진을 누르면 크게 볼 수 있어요. 더 많은 작업은 인스타그램 <a class="u" href="https://www.instagram.com/studioelle_id/" target="_blank" rel="noopener">@studioelle_id</a>에서.</p>
+      </div>
+      <div class="chips" role="group" aria-label="갤러리 분류">
+        <button class="chip" type="button" data-f="all" aria-pressed="true">전체</button>
+        <button class="chip" type="button" data-f="id" aria-pressed="false">증명·여권</button>
+        <button class="chip" type="button" data-f="semi" aria-pressed="false">세미프로필</button>
+        <button class="chip" type="button" data-f="pic" aria-pressed="false">화보 프로필</button>
+        <button class="chip" type="button" data-f="men" aria-pressed="false">남성</button>
+        <button class="chip" type="button" data-f="career" aria-pressed="false">취업·졸업</button>
+        <button class="chip" type="button" data-f="with" aria-pressed="false">커플·반려견</button>
+      </div>
+      <div class="grid" id="grid">
+        <figure class="shot" data-c="pic"><img loading="lazy" src="se-pic-01.webp" alt="화보 프로필 · 검은 가죽 재킷, 그림자 배경" width="800" height="1000" /><figcaption>화보 프로필</figcaption></figure>
+        <figure class="shot" data-c="id"><img loading="lazy" src="se-id-01.webp" alt="증명사진 · 흰 배경, 검은 상의" width="800" height="1000" /><figcaption>증명사진</figcaption></figure>
+        <figure class="shot" data-c="semi"><img loading="lazy" src="se-semi-02.webp" alt="세미프로필 · 연한 하늘색 배경" width="800" height="1000" /><figcaption>세미프로필</figcaption></figure>
+        <figure class="shot" data-c="pic"><img loading="lazy" src="se-pic-07.webp" alt="화보 프로필 · 의자에 앉은 전신 컷" width="800" height="1000" /><figcaption>화보 프로필</figcaption></figure>
+        <figure class="shot" data-c="men"><img loading="lazy" src="se-men-01.webp" alt="남성 프로필 · 검은 셔츠" width="800" height="1000" /><figcaption>남성 프로필</figcaption></figure>
+        <figure class="shot" data-c="pic"><img loading="lazy" src="se-pic-02.webp" alt="화보 프로필 · 웨이브 헤어 측면" width="800" height="1000" /><figcaption>화보 프로필</figcaption></figure>
+        <figure class="shot" data-c="id"><img loading="lazy" src="se-id-03.webp" alt="증명사진 · 단발, 흰 배경" width="800" height="1000" /><figcaption>증명사진</figcaption></figure>
+        <figure class="shot" data-c="career"><img loading="lazy" src="se-career-01.webp" alt="승무원 지원용 프로필 · 스카프와 재킷" width="800" height="1000" /><figcaption>취업 프로필</figcaption></figure>
+        <figure class="shot" data-c="semi"><img loading="lazy" src="se-semi-04.webp" alt="세미프로필 · 흰 셔츠, 긴 웨이브 헤어" width="800" height="1000" /><figcaption>세미프로필</figcaption></figure>
+        <figure class="shot" data-c="pic"><img loading="lazy" src="se-pic-13.webp" alt="화보 프로필 · 회색 배경, 검은 튜브톱" width="800" height="1000" /><figcaption>화보 프로필</figcaption></figure>
+        <figure class="shot" data-c="with"><img loading="lazy" src="se-with-02.webp" alt="반려견과 함께 · 베이지 배경" width="800" height="1000" /><figcaption>반려견과 함께</figcaption></figure>
+        <figure class="shot" data-c="pic"><img loading="lazy" src="se-pic-06.webp" alt="화보 프로필 · 회색 벽 앞 상반신" width="800" height="1000" /><figcaption>화보 프로필</figcaption></figure>
+        <figure class="shot" data-c="id"><img loading="lazy" src="se-id-04.webp" alt="증명사진 · 흰 상의, 긴 생머리" width="800" height="1000" /><figcaption>증명사진</figcaption></figure>
+        <figure class="shot" data-c="semi"><img loading="lazy" src="se-semi-06.webp" alt="세미프로필 · 흰 오프숄더" width="800" height="1000" /><figcaption>세미프로필</figcaption></figure>
+        <figure class="shot" data-c="men"><img loading="lazy" src="se-men-02.webp" alt="남성 프로필 · 가죽 재킷, 그림자 배경" width="800" height="1000" /><figcaption>남성 프로필</figcaption></figure>
+        <figure class="shot" data-c="pic"><img loading="lazy" src="se-pic-11.webp" alt="화보 프로필 · 흑백 측면" width="800" height="1000" /><figcaption>화보 프로필</figcaption></figure>
+        <figure class="shot" data-c="career"><img loading="lazy" src="se-career-03.webp" alt="졸업 사진 · 학사모와 리본" width="800" height="1000" /><figcaption>졸업 사진</figcaption></figure>
+        <figure class="shot" data-c="id"><img loading="lazy" src="se-id-02.webp" alt="증명사진 · 흰 배경, 검은 브이넥" width="800" height="1000" /><figcaption>증명사진</figcaption></figure>
+        <figure class="shot" data-c="pic"><img loading="lazy" src="se-pic-03.webp" alt="화보 프로필 · 흰 니트, 긴 생머리" width="800" height="1000" /><figcaption>화보 프로필</figcaption></figure>
+        <figure class="shot" data-c="semi"><img loading="lazy" src="se-semi-03.webp" alt="세미프로필 · 흰 셔츠, 하늘색 배경" width="800" height="1000" /><figcaption>세미프로필</figcaption></figure>
+        <figure class="shot" data-c="with"><img loading="lazy" src="se-with-01.webp" alt="커플과 반려견 · 침대 위 연출" width="800" height="1000" /><figcaption>커플 · 반려견</figcaption></figure>
+        <figure class="shot" data-c="pic"><img loading="lazy" src="se-pic-04.webp" alt="화보 프로필 · 엎드린 포즈" width="800" height="1000" /><figcaption>화보 프로필</figcaption></figure>
+        <figure class="shot" data-c="id"><img loading="lazy" src="se-id-05.webp" alt="증명사진 · 단발, 검은 상의" width="800" height="1000" /><figcaption>증명사진</figcaption></figure>
+        <figure class="shot" data-c="career"><img loading="lazy" src="se-career-02.webp" alt="승무원 지원용 프로필 · 회색 유니폼" width="800" height="1000" /><figcaption>취업 프로필</figcaption></figure>
+        <figure class="shot" data-c="pic"><img loading="lazy" src="se-pic-08.webp" alt="화보 프로필 · 팔을 베고 누운 컷" width="800" height="1000" /><figcaption>화보 프로필</figcaption></figure>
+        <figure class="shot" data-c="semi"><img loading="lazy" src="se-semi-05.webp" alt="세미프로필 · 흰 오프숄더, 미소" width="800" height="1000" /><figcaption>세미프로필</figcaption></figure>
+        <figure class="shot" data-c="men"><img loading="lazy" src="se-men-03.webp" alt="남성 프로필 · 검은 정장 앉은 컷" width="800" height="1000" /><figcaption>남성 프로필</figcaption></figure>
+        <figure class="shot" data-c="pic"><img loading="lazy" src="se-pic-09.webp" alt="화보 프로필 · 손을 얼굴에 댄 포즈" width="800" height="1000" /><figcaption>화보 프로필</figcaption></figure>
+        <figure class="shot" data-c="id"><img loading="lazy" src="se-id-06.webp" alt="증명사진 · 흰 상의, 긴 생머리" width="800" height="1000" /><figcaption>증명사진</figcaption></figure>
+        <figure class="shot" data-c="with"><img loading="lazy" src="se-with-03.webp" alt="반려견 두 마리와 함께 · 베이지 배경 전신" width="800" height="1000" /><figcaption>반려견과 함께</figcaption></figure>
+        <figure class="shot" data-c="pic"><img loading="lazy" src="se-pic-10.webp" alt="화보 프로필 · 올림머리, 측면" width="800" height="1000" /><figcaption>화보 프로필</figcaption></figure>
+        <figure class="shot" data-c="semi"><img loading="lazy" src="se-semi-07.webp" alt="세미프로필 · 흰 블라우스, 갈색 헤어" width="800" height="1000" /><figcaption>세미프로필</figcaption></figure>
+        <figure class="shot" data-c="id"><img loading="lazy" src="se-id-07.webp" alt="증명사진 · 회색 니트" width="800" height="1000" /><figcaption>증명사진</figcaption></figure>
+        <figure class="shot" data-c="pic"><img loading="lazy" src="se-pic-12.webp" alt="화보 프로필 · 빨간 배경" width="800" height="1000" /><figcaption>화보 프로필</figcaption></figure>
+        <figure class="shot" data-c="career"><img loading="lazy" src="se-career-04.webp" alt="졸업 사진 · 학사모, 미소" width="800" height="1000" /><figcaption>졸업 사진</figcaption></figure>
+        <figure class="shot" data-c="semi"><img loading="lazy" src="se-semi-08.webp" alt="세미프로필 · 흰 끈 원피스" width="800" height="1000" /><figcaption>세미프로필</figcaption></figure>
+        <figure class="shot" data-c="pic"><img loading="lazy" src="se-pic-14.webp" alt="화보 프로필 · 흰 끈 원피스 클로즈업" width="800" height="1000" /><figcaption>화보 프로필</figcaption></figure>
+        <figure class="shot" data-c="with"><img loading="lazy" src="se-with-04.webp" alt="커플과 반려견 · 흰 배경" width="800" height="1000" /><figcaption>커플 · 반려견</figcaption></figure>
+        <figure class="shot" data-c="id"><img loading="lazy" src="se-id-08.webp" alt="증명사진 · 흰 배경, 긴 생머리 정면" width="800" height="1000" /><figcaption>증명사진</figcaption></figure>
+        <figure class="shot" data-c="pic"><img loading="lazy" src="se-pic-05.webp" alt="화보 프로필 · 흰 오프숄더 클로즈업" width="800" height="1000" /><figcaption>화보 프로필</figcaption></figure>
+        <figure class="shot" data-c="semi"><img loading="lazy" src="se-semi-01.webp" alt="세미프로필 · 흰 튜브톱, 긴 갈색 헤어" width="800" height="1000" /><figcaption>세미프로필</figcaption></figure>
+      </div>
+      <div class="more">
+        <button class="btn line" type="button" id="moreBtn">사진 더 보기</button>
+        <a class="btn line" href="https://www.instagram.com/studioelle_id/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-insta"/></svg>인스타그램에서 더 보기</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="사진 크게 보기">
+    <button class="x" type="button" aria-label="닫기"><svg aria-hidden="true"><use href="#i-x"/></svg></button>
+    <button class="prev" type="button" aria-label="이전 사진"><svg aria-hidden="true" style="transform:scaleX(-1)"><use href="#i-arrow"/></svg></button>
+    <img alt="" />
+    <button class="next" type="button" aria-label="다음 사진"><svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+    <p class="cap"></p>
+  </div>
+
+  <section class="sec" id="about" aria-labelledby="about-h">
+    <div class="wrap why">
+      <figure class="reveal"><img loading="lazy" src="se-feature.webp" alt="회색 배경과 그림자를 살린 단발 화보 프로필" width="1000" height="1262" /></figure>
+      <div class="body reveal">
+        <div class="kick" style="margin-bottom:24px"><span>03 / About</span><span>스튜디오엘르</span></div>
+        <blockquote id="about-h">“자신의 개성을<br />기록하는 사진.”</blockquote>
+        <p>공장식 찍어내기 보정으로 자신의 개성을 기록하지 못한 경우가 많으실 거예요. 스튜디오엘르는 한 사람 한 사람에게 어울리는 분위기를 파악해 가장 잘 맞는 스타일로 작업합니다.</p>
+        <p>충분히 이야기 나누며 원하시는 바를 파악하고 1:1로 보정해, 오래 봐도 만족스러운 사진을 드립니다.</p>
+        <ul class="points">
+          <li><span class="n">01</span><div><b>1인 여성 작가</b><span>촬영부터 보정까지 한 작가가 직접.</span></div></li>
+          <li><span class="n">02</span><div><b>1:1 밀착 보정</b><span>개개인에 맞춘 보정, 언제 봐도 퀄리티 있게.</span></div></li>
+          <li><span class="n">03</span><div><b>인화본 바로 수령</b><span>디지털 파일은 촬영 후 2시간 안에 카카오톡으로.</span></div></li>
+          <li><span class="n">04</span><div><b>배경·색감 지정 가능</b><span>원하시는 느낌의 사진을 보내주세요.</span></div></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="price" aria-labelledby="price-h">
+    <div class="wrap">
+      <div class="kick"><span>04 / Price</span><span>가격</span></div>
+      <div class="sec-title reveal">
+        <h2 id="price-h">Price <span class="it">list.</span></h2>
+        <p>예약은 네이버에서 ‘스튜디오엘르’를 검색해 신청해 주세요. 예약창이 뜨지 않으면 전체 마감된 경우예요.</p>
+      </div>
+      <div class="price-wrap">
+        <div class="ptable reveal">
+          <h3>1인 촬영<span class="it">Solo</span></h3>
+          <dl>
+            <div class="row"><dt>증명사진 · 여권사진</dt><dd>60,000<small>원</small></dd></div>
+            <div class="row"><dt>세미프로필</dt><dd>80,000<small>원</small></dd></div>
+            <div class="row"><dt>2컷 세미프로필</dt><dd>130,000<small>원</small></dd></div>
+            <div class="row"><dt>화보 한 컷</dt><dd>120,000<small>원</small></dd></div>
+            <div class="row"><dt>화보 두 컷</dt><dd>180,000<small>원</small></dd></div>
+            <div class="row"><dt>화보 네 컷<small>2컨셉</small></dt><dd>300,000<small>원</small></dd></div>
+          </dl>
+        </div>
+        <div>
+          <div class="ptable reveal">
+            <h3>2인 이상<span class="it">Together</span></h3>
+            <dl>
+              <div class="row"><dt>화보 단체 두 컷<small>2인 기준</small></dt><dd>250,000<small>원</small></dd></div>
+              <div class="row"><dt>1인 추가</dt><dd>+50,000<small>원</small></dd></div>
+            </dl>
+          </div>
+          <div class="ptable reveal" style="margin-top:36px">
+            <h3>추가 비용<span class="it">Extra</span></h3>
+            <dl>
+              <div class="row"><dt>재수정 · 기존 보정본에서</dt><dd>10,000<small>원</small></dd></div>
+              <div class="row"><dt>재보정 · 원본 상태에서</dt><dd>40,000<small>원</small></dd></div>
+              <div class="row"><dt>추가 인화 택배 발송</dt><dd>6,000<small>원</small></dd></div>
+            </dl>
+            <p class="pnote">헤어·메이크업은 제휴 샵에서 할인가로 받을 수 있어요. <b>아래 촬영 안내</b>를 확인해 주세요.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="guide" aria-labelledby="guide-h">
+    <div class="wrap guide-wrap">
+      <div class="sec-title reveal">
+        <div class="kick" style="margin-bottom:10px"><span>05 / Guide</span><span>촬영 안내</span></div>
+        <h2 id="guide-h">Before <span class="it">you come.</span></h2>
+        <p>예약 전에 한 번 읽어주세요. 제목을 누르면 펼쳐져요.</p>
+      </div>
+      <div class="guide reveal">
+        <details>
+          <summary><span class="n">01</span><span class="t">예약 방법<small>100% 예약제 · 네이버 예약</small></span><span class="pm" aria-hidden="true"></span></summary>
+          <div class="panel"><div class="panel-in">
+            <p>네이버에서 ‘스튜디오엘르’를 검색해 예약 신청해 주세요.</p>
+            <ul>
+              <li>예약창이 뜨지 않으면 예약이 전체 마감된 경우예요.</li>
+              <li>취소된 자리는 네이버에 상시 반영돼요.</li>
+              <li>100% 예약제로, 한 분이 예약하시면 그 시간은 막아두고 진행합니다.</li>
+            </ul>
+            <p class="muted">문의는 카카오톡 채널(카카오톡 검색창에 ‘스튜디오엘르’) 또는 네이버 톡톡으로 부탁드려요.</p>
+          </div></div>
+        </details>
+        <details>
+          <summary><span class="n">02</span><span class="t">증명 · 세미 · 화보, 무엇이 다른가요?<small>제출용 사용 가능 여부</small></span><span class="pm" aria-hidden="true"></span></summary>
+          <div class="panel"><div class="panel-in">
+            <p><b>증명사진</b><br />상반신 정면, 정해진 배경 중 1가지. 보정 후 제출용 사이즈 추가 제공.</p>
+            <p><b>세미프로필</b><br />증명사진과 같은 구도·배경에 측면까지 촬영. 민증·운전면허 등 <b>제출용으로는 사용이 어려워요.</b></p>
+            <p><b>화보 프로필</b><br />자유로운 구도와 포즈, 원하는 컨셉·색감. 맞춤 조명·그림자·색감으로 작업해요.</p>
+          </div></div>
+        </details>
+        <details>
+          <summary><span class="n">03</span><span class="t">당일 촬영 후 파일 받는 법<small>촬영 후 2시간 안에 카카오톡으로</small></span><span class="pm" aria-hidden="true"></span></summary>
+          <div class="panel"><div class="panel-in">
+            <p>촬영 후 카카오톡 채널로 아래 양식을 보내주세요.</p>
+            <div class="box"><ol>
+              <li>성함</li>
+              <li>촬영 날짜</li>
+              <li>인스타 업로드 동의 여부 (동의 / 비동의)<br /><span class="muted">보정된 사진만 스토리 혹은 게시물에 업로드될 수 있어요.</span></li>
+              <li>네이버 포토리뷰 참여 여부 (o / x)<br /><span class="muted">당일 밤까지 작성 부탁드려요.</span></li>
+              <li>촬영 순서 (첫 번째, 두 번째 등)<br /><span class="muted">2명 이상 방문 시에만 해당돼요.</span></li>
+            </ol></div>
+            <p class="muted">촬영 후 2시간 안에 카카오톡으로 파일을 보내드려요. 이후에도 파일이 오지 않으면 연락 한 번만 부탁드려요.</p>
+          </div></div>
+        </details>
+        <details>
+          <summary><span class="n">04</span><span class="t">헤어 · 메이크업 제휴<small>메종드네뜨 · 뷰아주 · 프리테 · 온어스</small></span><span class="pm" aria-hidden="true"></span></summary>
+          <div class="panel"><div class="panel-in">
+            <p>스튜디오 예약 후, 각 샵에 <b>‘스튜디오엘르 촬영’</b>이라고 알려주셔야 제휴가로 적용돼요.</p>
+            <div class="partners">
+              <div class="partner">
+                <h4>메종드네뜨<span class="it">Maison de Nette</span></h4>
+                <p>헤어·메이크업 두 가지 포함가. 스튜디오 예약 확정 후 메종드네뜨 네이버 혹은 카카오채널로 예약하며 ‘스튜디오엘르 촬영 건’이라고 남겨주세요.</p>
+                <p class="muted"><a class="u" href="https://www.instagram.com/nette.makeup/" target="_blank" rel="noopener">@nette.makeup</a></p>
+              </div>
+              <div class="partner">
+                <h4>뷰아주<span class="it">Beau a ju</span></h4>
+                <p>예약 시 스튜디오 예약 내역을 보여주시면 할인가 적용. 예약·문의는 뷰아주 카카오채널 / 네이버 톡톡 / DM으로.</p>
+                <p class="muted"><a class="u" href="https://www.instagram.com/beau.a.ju_makeup/" target="_blank" rel="noopener">@beau.a.ju_makeup</a></p>
+              </div>
+              <div class="partner">
+                <h4>프리테<span class="it">prette</span></h4>
+                <p>업스타일 추가 시 2만원 추가. 예약은 <a class="u" href="https://pf.kakao.com/_Yjxnkxj" target="_blank" rel="noopener">프리테 카카오채널</a>로 연락해 주세요.</p>
+                <p class="muted"><a class="u" href="https://www.instagram.com/prette.makeup.official/" target="_blank" rel="noopener">@prette.makeup.official</a></p>
+              </div>
+              <div class="partner">
+                <h4>온어스<span class="it">onus</span></h4>
+                <p>헤메(여) 116,000~126,000원 (머리 기장에 따라) · 헤메(남) 63,000원<br />메이크업(여) 99,000원 · 메이크업(남) 45,000원</p>
+                <p>온어스 네이버 예약에서 ‘제휴업체 할인’을 선택하고, 스튜디오엘르 촬영 건이라고 남겨주세요.</p>
+                <p class="muted"><a class="u" href="https://www.instagram.com/onus__studio/" target="_blank" rel="noopener">@onus__studio</a> · <a class="u" href="https://www.instagram.com/on.us_makeup/" target="_blank" rel="noopener">@on.us_makeup</a></p>
+              </div>
+            </div>
+          </div></div>
+        </details>
+        <details>
+          <summary><span class="n">05</span><span class="t">예약 변경 · 취소 · 환불<small>신중한 예약 부탁드려요</small></span><span class="pm" aria-hidden="true"></span></summary>
+          <div class="panel"><div class="panel-in">
+            <table class="refund">
+              <tr><td>예약 당일 취소 시</td><td>100% 환불</td></tr>
+              <tr><td>이용 14일 전까지</td><td>80% 환불</td></tr>
+              <tr><td>이용 7일 전까지</td><td>50% 환불</td></tr>
+            </table>
+            <p><b>그 외에는 환불이 불가하며, 일정 변경도 어려워요.</b> 네이버로 변경 요청은 받지 않아요.</p>
+            <p class="muted">100% 예약제로, 한 분이 예약하시면 그 시간을 막아두고 진행하기 때문이에요.</p>
+          </div></div>
+        </details>
+        <details>
+          <summary><span class="n">06</span><span class="t">재수정 · 추가 인화<small>보정본 전달 이후</small></span><span class="pm" aria-hidden="true"></span></summary>
+          <div class="panel"><div class="panel-in">
+            <p>촬영본을 받아보신 뒤 재수정을 요청하시면 추가 비용이 있어요.</p>
+            <ul>
+              <li>기존 보정본에서 재수정 : 10,000원</li>
+              <li>원본 상태에서 재보정 : 40,000원</li>
+            </ul>
+            <p class="muted">1:1 맞춤 보정으로 작업하기 때문에, 최종본 전달 후 재수정은 추가 작업으로 봐요.</p>
+            <p><b>추가 인화</b>는 가능해요. 방문 최소 하루 전에 요청해 주시고, 촬영 후 보내드린 파일을 보관하고 계셔야 인화할 수 있어요. 택배 요청 시 6,000원.</p>
+          </div></div>
+        </details>
+        <details>
+          <summary><span class="n">07</span><span class="t">주차<small>전용 주차 공간 없음</small></span><span class="pm" aria-hidden="true"></span></summary>
+          <div class="panel"><div class="panel-in">
+            <p>주차 공간은 따로 없어요. 근처 공용주차장을 이용해 주세요.</p>
+            <ul><li>고려주차장</li><li>황금주차장</li></ul>
+            <p class="muted">수원역 13번 출구에서 걸어서 3분이라 대중교통을 추천드려요.</p>
+          </div></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="visit" aria-labelledby="visit-h">
+    <div class="wrap">
+      <div class="kick"><span>06 / Visit</span><span>오시는 길</span></div>
+      <div class="visit">
+        <div class="reveal">
+          <div class="sec-title" style="margin-bottom:28px">
+            <h2 id="visit-h">Find <span class="it">us.</span></h2>
+          </div>
+          <dl class="info">
+            <div class="row"><dt>Address</dt><dd>경기 수원시 팔달구 덕영대로895번길 7, 2층 201호</dd></div>
+            <div class="row"><dt>Subway</dt><dd>수원역 13번 출구 도보 3분<small>4번 출구 도보 4분 · 7번 출구 도보 3분</small></dd></div>
+            <div class="row"><dt>Bus</dt><dd>수원역(고등동구터미널 방면) 정류장 도보 1분</dd></div>
+            <div class="row"><dt>Hours</dt><dd>~ 20:00 · 100% 예약제<small>예약 가능한 시간은 네이버 예약에서 확인해 주세요.</small></dd></div>
+            <div class="row"><dt>Parking</dt><dd>전용 주차 없음<small>근처 공용주차장(고려주차장 · 황금주차장) 이용</small></dd></div>
+            <div class="row"><dt>Call</dt><dd><a href="tel:0507-1470-6685">0507-1470-6685</a><small>문의는 카카오톡 채널 · 네이버 톡톡이 더 빨라요.</small></dd></div>
+          </dl>
+          <div class="btns">
+            <a class="btn dark" href="https://m.place.naver.com/place/1897165666/ticket" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-naver"/></svg>네이버 예약</a>
+            <a class="btn sky" href="https://pf.kakao.com/_vqMtxj" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-kakao"/></svg>카카오톡 문의</a>
+            <a class="btn line" href="https://www.instagram.com/studioelle_id/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-insta"/></svg>인스타그램</a>
+          </div>
+        </div>
+        <iframe class="mapframe reveal" src="https://www.google.com/maps?q=%EA%B2%BD%EA%B8%B0%20%EC%88%98%EC%9B%90%EC%8B%9C%20%ED%8C%94%EB%8B%AC%EA%B5%AC%20%EB%8D%95%EC%98%81%EB%8C%80%EB%A1%9C895%EB%B2%88%EA%B8%B8%207&output=embed" title="스튜디오엘르 위치 지도 · 경기 수원시 팔달구 덕영대로895번길 7" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <img src="se-logo.webp" alt="studio elle." width="669" height="205" loading="lazy" />
+    <div>
+      <p>스튜디오엘르 · 경기 수원시 팔달구 덕영대로895번길 7, 2층 201호 · <a href="tel:0507-1470-6685">0507-1470-6685</a></p>
+      <p><a href="https://m.place.naver.com/place/1897165666/ticket" target="_blank" rel="noopener">네이버 예약</a> · <a href="https://pf.kakao.com/_vqMtxj" target="_blank" rel="noopener">카카오톡 채널</a> · <a href="https://www.instagram.com/studioelle_id/" target="_blank" rel="noopener">@studioelle_id</a> · <a href="https://blog.naver.com/studio_elle" target="_blank" rel="noopener">블로그</a></p>
+      <p>© 2026 studio elle.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  /* 리빌 (IntersectionObserver + 2.4초 안전망) */
+  var items=[].slice.call(document.querySelectorAll('.reveal'));
+  var show=function(el){ el.classList.add('in'); };
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ show(e.target); io.unobserve(e.target); } }); }, {threshold:.06});
+    items.forEach(function(el){ io.observe(el); });
+    setTimeout(function(){ items.forEach(show); }, 2400);
+  } else { items.forEach(show); }
+
+  /* 히어로 크로스페이드 (setInterval 강제 구동) */
+  var sl=[].slice.call(document.querySelectorAll('#slides img'));
+  var dots=[].slice.call(document.querySelectorAll('.hero-fig .dots i'));
+  var si=0;
+  setInterval(function(){
+    sl[si].classList.remove('on'); dots[si] && dots[si].classList.remove('on');
+    si=(si+1)%sl.length;
+    sl[si].classList.add('on'); dots[si] && dots[si].classList.add('on');
+  }, 4200);
+
+  /* 갤러리 필터 + 더 보기 */
+  var shots=[].slice.call(document.querySelectorAll('#grid .shot'));
+  var chips=[].slice.call(document.querySelectorAll('.chip'));
+  var moreBtn=document.getElementById('moreBtn');
+  var LIMIT=16, filter='all', expanded=false;
+  function render(){
+    var n=0;
+    shots.forEach(function(s){
+      var match = filter==='all' || s.getAttribute('data-c')===filter;
+      var vis = match && (filter!=='all' || expanded || n<LIMIT);
+      if(match) n++;
+      s.classList.toggle('hide', !vis);
+    });
+    var hidden = filter==='all' && !expanded && n>LIMIT;
+    moreBtn.style.display = hidden ? '' : 'none';
+    if(hidden) moreBtn.textContent='사진 더 보기 (+' + (n-LIMIT) + ')';
+  }
+  chips.forEach(function(c){
+    c.addEventListener('click', function(){
+      filter=c.getAttribute('data-f');
+      chips.forEach(function(x){ x.setAttribute('aria-pressed', x===c ? 'true' : 'false'); });
+      render();
+    });
+  });
+  moreBtn.addEventListener('click', function(){ expanded=true; render(); });
+  render();
+
+  /* 라이트박스 */
+  var lb=document.getElementById('lb'), lbImg=lb.querySelector('img'), lbCap=lb.querySelector('.cap');
+  var list=[], idx=0, lastFocus=null;
+  function open(i){
+    list=shots.filter(function(s){ return !s.classList.contains('hide'); });
+    idx=i; paint(); lastFocus=document.activeElement;
+    lb.classList.add('open'); document.body.classList.add('lock');
+    lb.querySelector('.x').focus();
+  }
+  function paint(){
+    var im=list[idx].querySelector('img');
+    lbImg.src=im.getAttribute('src'); lbImg.alt=im.alt;
+    lbCap.textContent=im.alt + '  ·  ' + (idx+1) + ' / ' + list.length;
+  }
+  function close(){ lb.classList.remove('open'); document.body.classList.remove('lock'); if(lastFocus) lastFocus.focus(); }
+  function go(d){ idx=(idx+d+list.length)%list.length; paint(); }
+  shots.forEach(function(s){
+    s.setAttribute('tabindex','0'); s.setAttribute('role','button');
+    s.addEventListener('click', function(){ var vis=shots.filter(function(x){ return !x.classList.contains('hide'); }); open(vis.indexOf(s)); });
+    s.addEventListener('keydown', function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); s.click(); } });
+  });
+  lb.querySelector('.x').addEventListener('click', close);
+  lb.querySelector('.prev').addEventListener('click', function(){ go(-1); });
+  lb.querySelector('.next').addEventListener('click', function(){ go(1); });
+  lb.addEventListener('click', function(e){ if(e.target===lb) close(); });
+  document.addEventListener('keydown', function(e){
+    if(!lb.classList.contains('open')) return;
+    if(e.key==='Escape') close(); else if(e.key==='ArrowLeft') go(-1); else if(e.key==='ArrowRight') go(1);
+  });
+  var tx=null;
+  lb.addEventListener('touchstart', function(e){ tx=e.touches[0].clientX; }, {passive:true});
+  lb.addEventListener('touchend', function(e){ if(tx===null) return; var dx=e.changedTouches[0].clientX-tx; if(Math.abs(dx)>40) go(dx<0?1:-1); tx=null; });
+
+  /* 토글 부드럽게 열고 닫기 */
+  [].slice.call(document.querySelectorAll('.guide details')).forEach(function(d){
+    var sum=d.querySelector('summary'), panel=d.querySelector('.panel'), busy=false;
+    sum.addEventListener('click', function(e){
+      e.preventDefault(); if(busy) return; busy=true;
+      if(d.open){
+        panel.style.height=panel.scrollHeight+'px';
+        requestAnimationFrame(function(){ panel.style.transition='height .35s ease'; panel.style.height='0px'; });
+        setTimeout(function(){ d.open=false; panel.style.cssText=''; busy=false; }, 380);
+      } else {
+        d.open=true; panel.style.height='0px';
+        requestAnimationFrame(function(){ panel.style.transition='height .35s ease'; panel.style.height=panel.scrollHeight+'px'; });
+        setTimeout(function(){ panel.style.cssText=''; busy=false; }, 380);
+      }
+    });
+  });
+
+  /* 앵커 부드러운 스크롤 (rAF) */
+  var head=document.querySelector('.site-head');
+  var ease=function(t){ return t<.5 ? 4*t*t*t : 1-Math.pow(-2*t+2,3)/2; };
+  document.addEventListener('click', function(ev){
+    var a=ev.target.closest && ev.target.closest('a[href^="#"]');
+    if(!a) return;
+    var id=a.getAttribute('href'); if(id.length<2) return;
+    var target=id==='#top' ? document.body : document.querySelector(id);
+    if(!target) return;
+    ev.preventDefault();
+    var off=(head ? head.offsetHeight : 0) + 6;
+    var startY=window.pageYOffset;
+    var endY=target===document.body ? 0 : Math.max(0, target.getBoundingClientRect().top + startY - off);
+    var dist=endY-startY, dur=Math.min(900, Math.max(420, Math.abs(dist)*.45)), t0=null;
+    function step(ts){ if(t0===null) t0=ts; var p=Math.min(1,(ts-t0)/dur); window.scrollTo(0, startY+dist*ease(p)); if(p<1) requestAnimationFrame(step); }
+    requestAnimationFrame(step);
+    if(history.replaceState) history.replaceState(null,'',id);
+  });
+})();
+</script>
+<noscript><style>.reveal{opacity:1!important;transform:none!important}.slides img:first-child{opacity:1}</style></noscript>
+</body>
+</html>
